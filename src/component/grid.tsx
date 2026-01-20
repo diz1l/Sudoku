@@ -1,4 +1,3 @@
-import React from 'react'
 // import type {CellValue, Cell, Board, GameState, Position} from '../types'
 
 interface GridProps {

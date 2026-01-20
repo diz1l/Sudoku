@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ButtonsProps {
     selectButton: number | null;
     setSelectButton: (value: number | null) => void;
