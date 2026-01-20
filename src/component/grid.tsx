@@ -8,7 +8,7 @@ interface GridProps {
     invalidCells: Set<string>;
 }
 
-export default function Grid({ board, puzzle, selectedNumber, setSelectedNumber, invalidCells }: GridProps) {
+export default function Grid({ board, puzzle, selectedNumber: _selectedNumber, setSelectedNumber, invalidCells }: GridProps) {
 
     return (
         <div className="sudoku-container">

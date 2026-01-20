@@ -7,7 +7,7 @@ interface ButtonsProps {
     handleSolve: () => void;
 }
 
-export default function Buttons({ selectButton, setSelectButton, handleNewGame, handleReset, handleCheck, handleSolve }: ButtonsProps) {
+export default function Buttons({ selectButton: _selectButton, setSelectButton, handleNewGame, handleReset, handleCheck, handleSolve }: ButtonsProps) {
     const controlButtons = ['New Game', 'Check', 'Solve', 'Reset'];
     const numberOfButtons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
