@@ -25,12 +25,16 @@ export default function Grid({ board, puzzle, selectedNumber: _selectedNumber, s
                                         <input
                                             className="cell-input"
                                             type="text"
+                                            inputMode="none"
                                             maxLength={1}
                                             value={cell === null ? '' : cell}
                                             readOnly
                                             onClick={() => { setSelectedNumber([rowIndex, colIndex]) }}
                                             onChange={() => { }}
-                                            onFocus={() => { setSelectedNumber([rowIndex, colIndex]) }}
+                                            onFocus={(e) => { 
+                                                setSelectedNumber([rowIndex, colIndex]);
+                                                e.target.blur();
+                                            }}
                                         />
                                     </td>
                                 );
