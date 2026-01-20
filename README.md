@@ -2,6 +2,8 @@
 
 A fully functional Sudoku game built with React, TypeScript, and Vite.
 
+🎮 **[Play Live Demo](https://diz1l.github.io/Sudoku/)**
+
 ## Screenshots
 
 <div align="center">
