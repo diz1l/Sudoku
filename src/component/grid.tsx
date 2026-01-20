@@ -21,21 +21,12 @@ export default function Grid({ board, puzzle, selectedNumber: _selectedNumber, s
                                 const isInvalid = invalidCells.has(`${rowIndex}-${colIndex}`);  
                                 const cellClass = `sudoku-cell ${isPrefilled ? 'prefilled' : ''} ${isInvalid ? 'invalid' : ''} ${colIndex % 3 === 2 ? 'right-border' : ''} ${rowIndex % 3 === 2 ? 'bottom-border' : ''}`;
                                 return (
-                                    <td key={colIndex} className={cellClass}>
-                                        <input
-                                            className="cell-input"
-                                            type="text"
-                                            inputMode="none"
-                                            maxLength={1}
-                                            value={cell === null ? '' : cell}
-                                            readOnly
-                                            onClick={() => { setSelectedNumber([rowIndex, colIndex]) }}
-                                            onChange={() => { }}
-                                            onFocus={(e) => { 
-                                                setSelectedNumber([rowIndex, colIndex]);
-                                                e.target.blur();
-                                            }}
-                                        />
+                                    <td key={colIndex} className={cellClass}
+                                        onClick={() => { setSelectedNumber([rowIndex, colIndex]) }}
+                                    >
+                                        <div className="cell-input">
+                                            {cell === null ? '' : cell}
+                                        </div>
                                     </td>
                                 );
                             })}
