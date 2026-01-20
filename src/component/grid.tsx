@@ -27,7 +27,7 @@ export default function Grid({ board, puzzle, selectedNumber: _selectedNumber, s
                                             type="text"
                                             maxLength={1}
                                             value={cell === null ? '' : cell}
-                                            readOnly={isPrefilled}
+                                            readOnly
                                             onClick={() => { setSelectedNumber([rowIndex, colIndex]) }}
                                             onChange={() => { }}
                                             onFocus={() => { setSelectedNumber([rowIndex, colIndex]) }}
